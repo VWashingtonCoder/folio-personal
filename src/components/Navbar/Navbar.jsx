@@ -1,11 +1,11 @@
 const Navbar = (props) => {
-    const { update } = props;
+  const { update } = props;
   const navBtns = ["Home", "About", "Contact"];
-  
+
   const onClick = (e) => {
     e.preventDefault();
     update(e.target.value);
-  }
+  };
 
   return (
     <div id="Navbar">
@@ -14,7 +14,12 @@ const Navbar = (props) => {
       </div>
       <div className="navbar-nav">
         {navBtns.map((btn) => (
-          <button key={`${btn} linkBtn`} value={btn} onClick={onClick}>
+          <button
+            key={`${btn}-btn`}
+            className="link-btn"
+            value={btn}
+            onClick={onClick}
+          >
             {btn}
           </button>
         ))}
