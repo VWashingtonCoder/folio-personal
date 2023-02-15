@@ -10,7 +10,6 @@ const Folio = () => {
     const updateDisplay = (page) => { setDisplay(page) };
     const updateTheme = (theme) => { setTheme(theme) };
 
-    console.log(theme);
     return(
         <div id="Folio">
             <Navbar update={updateDisplay}/>

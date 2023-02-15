@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { BsChevronBarRight, BsChevronBarLeft } from "react-icons/bs";
+import "./ThemePanel.css"
 
 const ThemePanel = (props) => {
   const { theme, update } = props;
   const [open, setOpen] = useState(false);
 
-  const onClick = (e) => {
+  const changeTheme = (e) => {
     e.preventDefault();
-    const value = e.target.value;
-    value === "tab" ? setOpen(!open) : update(value);
-
+    update(e.target.value);
   };
+
+  const openTab = (e) => {
+    e.preventDefault();
+    setOpen(!open);
+  }
   
   return (
-    <div id="ThemePanel">
+    <div id="ThemePanel" className={open && 'open'}>
       <span>Change Theme</span>
       <div className="btn-group">
         {["light", "dark"].map((btn) => (
@@ -21,14 +25,17 @@ const ThemePanel = (props) => {
             key={`${btn}-btn`}
             value={btn}
             className={`switcher-btn ${theme === btn ? "active" : ""}`}
-            onClick={onClick}
+            onClick={changeTheme}
           >
             {btn}
           </button>
         ))}
       </div>
-      <button className="theme-tab" value="tab" onClick={onClick}>
-        {open ? <BsChevronBarRight /> : <BsChevronBarLeft />}
+      <button className="theme-tab link-btn" onClick={openTab}>
+        {open 
+          ? <BsChevronBarRight /> 
+          : <BsChevronBarLeft />
+        }
       </button>
     </div>
   );

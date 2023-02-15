@@ -49,6 +49,7 @@ body {
   color: var(--color-text);
   background-color: var(--bg);
   text-align: left;
+  max-width: 2400px;
 }
 
 a {
@@ -74,15 +75,10 @@ button {
 }
 
 .link-btn {
-  font-size: 1.25rem;
-  font-weight: 600;
   background-color: transparent;
   border: none;
-  padding: 0 1.3rem;
 }
-.link-btn:hover {
-  color: var(--color-hover);
-}
+
 /* 
 .container,
 .container-fluid {

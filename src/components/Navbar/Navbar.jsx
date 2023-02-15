@@ -2,7 +2,7 @@ const Navbar = (props) => {
   const { update } = props;
   const navBtns = ["Home", "About", "Contact"];
 
-  const onClick = (e) => {
+  const changePage = (e) => {
     e.preventDefault();
     update(e.target.value);
   };
@@ -16,9 +16,9 @@ const Navbar = (props) => {
         {navBtns.map((btn) => (
           <button
             key={`${btn}-btn`}
-            className="link-btn"
+            className="link-btn nav-btn"
             value={btn}
-            onClick={onClick}
+            onClick={changePage}
           >
             {btn}
           </button>
