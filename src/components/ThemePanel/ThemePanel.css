@@ -1,6 +1,6 @@
 #ThemePanel {
     position: fixed;
-    right: 10.75rem;
+    right: 0;
     top: 10rem;
     z-index: 1001;
     transition: 0.4s;
@@ -57,7 +57,7 @@
     height: 50px;
     border: 0;
     background: #495fef;
-    color: white;
+    color: var(--color-text);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     left: 1px;

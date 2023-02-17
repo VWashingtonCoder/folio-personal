@@ -7,7 +7,8 @@
     width: 94%;
 }
 .navbar-nav .nav-btn {
-    font-size: 1.25rem;
+  color: var(--color-text);
+  font-size: 1.25rem;
   font-weight: 600;
   padding: 0 1.3rem;
 }

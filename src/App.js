@@ -1,4 +1,4 @@
-import './App.css';
+import React from 'react';
 import Folio from './components/Folio/Folio';
 
 function App() {
