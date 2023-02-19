@@ -1,0 +1,14 @@
+.home-banner {
+    margin: 3rem auto;
+}
+.code-icon {
+    background-color: #da5252;
+    color: var(--color-text);
+    padding: 1rem 1.25rem 0.5rem;
+    border-radius: 50rem;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+}

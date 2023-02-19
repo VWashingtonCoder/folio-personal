@@ -1,3 +1,5 @@
+import "./Navbar.css"; 
+
 const Navbar = (props) => {
   const { update } = props;
   const navBtns = ["Home", "About", "Contact"];
